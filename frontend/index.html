@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Chat App</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="login-container" class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-error" class="error-message"></div>
+        </div>
+    </div>
+
+    <div id="chat-container" class="chat-container" style="display: none;">
+        <div class="sidebar">
+            <div class="user-info">
+                <h3>Welcome, <span id="current-username"></span></h3>
+                <button id="logout-button">Logout</button>
+            </div>
+            <h3>Chat Users</h3>
+            <div id="user-list" class="user-list"></div>
+        </div>
+        <div class="chat-area">
+            <div id="chat-header" class="chat-header">
+                <h2>Select a user to chat with</h2>
+            </div>
+            <div id="messages" class="messages"></div>
+            <div class="message-input">
+                <input type="text" id="message-input" placeholder="Type your message..." disabled>
+                <button id="send-button" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="./static/script.js"></script>
+</body>
+</html>
